@@ -1,0 +1,66 @@
+<table style="width:40%;">
+	<tr><td style="text-align: center; padding-bottom: 20px" colspan="2">
+		<p class="title">{{ place.item.forecast[0].day }}, {{ place.item.forecast[0].date }}</p>
+	</td></tr>
+	<tr>
+		<td class="todayTemp" >{{ place.item.condition.temp }}°</td>
+		<td>
+			<div align="center">
+			<i style="font-size: 6em; color: white; " class="{{todayWeatherIcon}}"></i> 
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="city" >{{ place.location.city }}</td>
+		<td class="todayWeatherText">{{ place.item.condition.text }}</td>
+	</tr>
+	</table>
+	<table style="width:40%;">
+	
+	<tr>
+		<td style="text-align: right; padding-right: 15px; padding-top: 20px; " rowspan="2">
+		<i style="font-size: 3em; color: grey; " class="{{day1Icon}}"></i>
+		</td>
+		<td class="otherDayText" style="padding-top: 20px;">Tomorrow</td>
+		<td class="otherDayTemp" style="padding-top: 20px;">{{ place.item.forecast[1].high }}°</td>
+	</tr>
+	<tr>
+		<td class="otherDayTextMin" >{{ place.item.forecast[1].text }}</td>
+		<td class="otherDayTempMin" >{{ place.item.forecast[1].low }}°</td>
+	</tr>
+	
+	
+	<tr>
+		<td style="text-align: right; padding-right: 15px; padding-top: 10px;" rowspan="2">
+		<i style="font-size: 3em; color: grey; " class="{{day1Icon}}"></i>
+		</td>
+		<td class="otherDayText" style="padding-top: 10px;">{{ place.item.forecast[2].day }}</td>
+		<td class="otherDayTemp" style="padding-top: 10px;">{{ place.item.forecast[2].high }}°</td>
+	</tr>
+	<tr>
+		<td class="otherDayTextMin">{{ place.item.forecast[2].text }}</td>
+		<td class="otherDayTempMin">{{ place.item.forecast[2].low }}°</td>
+	</tr>
+	<tr style="padding-top: 10px;">
+		<td style="text-align: right; padding-right: 15px; padding-top: 10px;" rowspan="2">
+		<i style="font-size: 3em; color: grey; " class="{{day1Icon}}"></i>
+		</td>
+		<td class="otherDayText" style="padding-top: 10px;">{{ place.item.forecast[3].day }}</td>
+		<td class="otherDayTemp" style="padding-top: 10px;">{{ place.item.forecast[3].high }}°</td>
+	</tr>
+	<tr>
+		<td class="otherDayTextMin">{{ place.item.forecast[3].text }}</td>
+		<td class="otherDayTempMin">{{ place.item.forecast[3].low }}°</td>
+	</tr>
+	<tr style="padding-top: 10px;">
+		<td style="text-align: right; padding-right: 15px; padding-top: 10px;" rowspan="2">
+		<i style="font-size: 3em; color: grey; " class="{{day1Icon}}"></i>
+		</td>
+		<td class="otherDayText" style="padding-top: 10px;">{{ place.item.forecast[4].day }}</td>
+		<td class="otherDayTemp" style="padding-top: 10px;">{{ place.item.forecast[4].high }}°</td>
+	</tr>
+	<tr>
+		<td class="otherDayTextMin">{{ place.item.forecast[4].text }}</td>
+		<td class="otherDayTempMin">{{ place.item.forecast[4].low }}°</td>
+	</tr>
+</table>
