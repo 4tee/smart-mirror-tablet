@@ -6,7 +6,7 @@ The next thing that I wanted to do it to add _interactivity_ into the project. C
 <br/>
 <br/>
 ###Project Demo Page
-Click this [[link]](https://4tee.github.io/smart-mirror/).
+Click this [[link]](https://4tee.github.io/smart-mirror-tablet/).
 <br/>
 <br/>
 ###In Action
