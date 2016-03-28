@@ -1,12 +1,12 @@
 <div id="weatherPlace" class="containter-top-right">
-	<div class="normal grey animated flipInX">
-		<i style="font-size: 2em; color: grey; " class="{{todayWeatherIcon}}"></i> 
+	<div class="normal white animated flipInX">
+		<i style="font-size: 2em; color: white; " class="{{todayWeatherIcon}}"></i> 
 		<span style="font-size: 1em;">{{ place.item.condition.temp }}°C</span>
 	</div>
 </div>
 <div id="dateGreeting" class="container-middle-center">
 	<div class="larger-by-4x animated flipInX">{{date | date : 'hh:mm'}}</div>
-	<div class="normal grey animated flipInX">{{greeting}}</div>
+	<div class="normal white animated flipInX">{{greeting}}</div>
 </div>
 <script>
     $( document ).ready(function() {
