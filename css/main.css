@@ -185,14 +185,14 @@ dt {
 }
 
 /* css for weather page */
-.title { font-size: 4em; color: white !important; }
-.todayTemp { font-size: 12em; text-align: center; color: white !important;}
-.city { font-size: 4em; text-align: center; color: white !important; }
+.title { font-size: 3em; color: white !important; }
+.todayTemp { font-size: 10em; text-align: center; color: white !important;}
+.city { font-size: 3em; text-align: center; color: white !important; }
 .todayWeatherText { font-size: 2em; text-align: center; color: white !important; }
-.otherDayText { font-size: 3em; text-align: left; color: grey !important; }
-.otherDayTextMin { font-size: 2em; text-align: left; color: grey !important; }
-.otherDayTemp { font-size: 3em; text-align: left; color: grey !important; }
-.otherDayTempMin { font-size: 2em; text-align: left; color: grey !important; }
+.otherDayText { font-size: 2em; text-align: left; color: grey !important; }
+.otherDayTextMin { font-size: 1.5em; text-align: left; color: grey !important; }
+.otherDayTemp { font-size: 2em; text-align: left; color: grey !important; }
+.otherDayTempMin { font-size: 1.5em; text-align: left; color: grey !important; }
 
 
 /* css for youtube */
