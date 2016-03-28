@@ -178,6 +178,7 @@
 		/******* WEATHER functions *******/
 		function fetchWeather(cityName) {
   	    	WeatherService.getWeather(cityName).then(function(data){
+				console.debug(data);
   	      		$scope.place = data;
 				$scope.todayWeatherIcon = WeatherService.setWeatherIcon(data.item.condition.code);
 				$scope.day1Icon = WeatherService.setWeatherIcon(data.item.forecast[1].code);

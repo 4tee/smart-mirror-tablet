@@ -8,10 +8,17 @@
 		service.getWeather = function(cityName) {
 		    var deferred = $q.defer();
 			
+			
+			/*var 
+			cityQuery = "select woeid from geo.places(1) where text='" + cityName + "'",
+			locationQuery = escape("select * from weather.forecast where woeid in ("+cityQuery+") and u='c'"),
+		    locationUrl = "https://query.yahooapis.com/v1/public/yql?q=" + locationQuery + "&format=json&diagnostics=true&callback=";*/
+			
 			var 
 			cityQuery = "select woeid from geo.places(1) where text='" + cityName + "'",
 			locationQuery = escape("select * from weather.forecast where woeid in ("+cityQuery+") and u='c'"),
-		    locationUrl = "https://query.yahooapis.com/v1/public/yql?q=" + locationQuery + "&format=json&diagnostics=true&callback=";
+		    locationUrl = "https://query.yahooapis.com/v1/public/yql?q=" + locationQuery + "&format=json&env=store://datatables.org/alltableswithkeys";
+			
 	
 			//     $http.get('https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20weather.forecast%20WHERE%20location%3D%22' + zip
 			// + '%22&format=json&diagnostics=true&callback=')
