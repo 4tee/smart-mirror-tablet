@@ -45,6 +45,7 @@
  			AnnyangService.addCommand('Mirror (*args)', function(args) {
  				if (args == undefined) $scope.finalResult = "Mirror";
 				$scope.awaken = true;
+				console.debug('awken:' + $scope.awaken);
 				defaultView();
  			});
 			
@@ -113,6 +114,24 @@
 					});
 				}
 			});
+			
+			
+			/* Video shooting purpose only - to be deleted later */
+			AnnyangService.addCommand('Google', function() {
+				YoutubeService.searchYouTube('google').then(function(results){
+					$scope.focus = "default";
+					//$scope.videoId = results.data.items[0].id.videoId;
+					$scope.videoId = 'SNtJF6Od1f8';
+					$scope.playerVars = { controls: 0, autoplay: 1 };
+					navigatePage("youtube");
+				});
+			});
+            AnnyangService.addCommand('San Francisco', function() {
+ 				$scope.focus = "default";
+ 				fetchWeather('San Francisco');
+                navigatePage("weather");
+            });
+			/*-----------------------------*/
 			
 
 			//Track when the Annyang is listening to us
