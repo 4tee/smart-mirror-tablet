@@ -10,10 +10,24 @@
 </div>
 <div id="busPanel" class="containter-top-left">
 </div>
+<div id="twitterPanel" class="containter-top-right">
+	<a
+		id="twitterPanel"
+		class="twitter-timeline"
+		data-dnt="true"
+		data-theme="dark"
+		data-link-color="#F5F8FA"
+		data-tweet-limit="1"
+		data-chrome="nofooter noborders noheader"
+		href="https://twitter.com/affsuzukicup">
+	</a>
+	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 <script>
     $( document ).ready(function() {
 		$('#dateGreeting').draggable();
 		$('#weatherPlace').draggable();
 		$('#busPanel').draggable();
+		$('#twitterPanel').draggable();
     });
 </script>
