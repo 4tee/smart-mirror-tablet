@@ -1,12 +1,12 @@
 (function(angular) {
     'use strict';
 
-    function MirrorCtrl(AnnyangService, WeatherService, MapService, YoutubeService, $scope, $timeout, $interval, $location) {
+    function MirrorCtrl(AnnyangService, WeatherService, MapService, YoutubeService, BusService, $scope, $timeout, $interval, $location) {
         var _this = this;
 		var DEFAULT_COMMAND_TEXT = '';
 		
 		$scope.listening = false;
-		$scope.awaken = false;
+		$scope.awaken = true;
         $scope.focus = "default";
         $scope.user = {};
         $scope.interimResult = DEFAULT_COMMAND_TEXT;
@@ -39,6 +39,8 @@
             var tick = $interval(updateTime, 1000);
             updateTime();
  			fetchWeather(config.location.name);
+			fetchBus();
+			$interval(fetchBus, 60000);
             restCommand();
 
              // List commands
@@ -178,7 +180,6 @@
 		/******* WEATHER functions *******/
 		function fetchWeather(cityName) {
   	    	WeatherService.getWeather(cityName).then(function(data){
-				console.debug(data);
   	      		$scope.place = data;
 				$scope.todayWeatherIcon = WeatherService.setWeatherIcon(data.item.condition.code);
 				$scope.day1Icon = WeatherService.setWeatherIcon(data.item.forecast[1].code);
@@ -189,6 +190,58 @@
 		}
 		
 		/** End of WEATHER functions **/
+		
+		
+		
+		/******* BUS functions *******/
+		function fetchBus() {
+			BusService.getAPIKey().then(function(token) {
+
+				BusService.getBusTiming(config.bus.stop, config.bus.buses).then(function(buses) {
+					var array = config.bus.buses.split(',');
+					
+					var index, busPanel;
+					var htmlCode = 
+						'<table>' +
+						'<tr>' +
+							'<td><img src="/img/bus.png"></td>' +
+							'<td class="smaller-by-2x" valign="middle" colspan="2">'+config.bus.name+'</td>' +
+						'</tr>' +
+						'<tr>' +
+							'<td>&nbsp;</td>' +
+							'<td class="smaller-by-4x" colspan="2">Last updated by ' + $scope.date.toLocaleTimeString() + '</td>' +
+						'</tr>';
+					
+					for (index=0; index<array.length; index++) {
+						console.log(array[index]+ ' ' + buses[array[index]]);
+						
+						var timings = buses[array[index]];
+						var fBus = '<td class="smaller-by-2x" style="padding-left: 45px;">'+timings[0]+'</td>';
+						var sBus = '<td class="smaller-by-2x" style="padding-right: 35px;">'+timings[1]+'</td>';
+						
+						if (timings[0] == 0)
+							fBus = '<td class="smaller-by-2x green" style="padding-left: 45px;"><strong>Arr</strong></td>';
+						if (timings[1] == 0)
+							sBus = '<td class="smaller-by-2x green" style="padding-right: 35px;"><strong>Arr</strong></td>';
+						
+						htmlCode +=
+						'<tr>' +
+							'<td class="smaller-by-2x" style="padding-left: 15px;"><strong>'+array[index]+'</strong></td>' +
+							 fBus +
+							 sBus +
+						'</tr>';
+					}
+					
+					htmlCode += '</table>';
+					document.getElementById("busPanel").innerHTML = htmlCode;
+					
+					
+					console.log(JSON.stringify(buses));
+				});
+			});
+			
+		}
+		/** End of BUS functions **/
 		
 		_this.init();
     }

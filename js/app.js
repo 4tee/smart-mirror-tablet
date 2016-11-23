@@ -17,6 +17,9 @@
 			.when('/youtube', {
 				templateUrl: 'html/youtube.html'
 			})
+			.when('/bus', {
+				templateUrl: 'html/bus.html'
+			})
 			.otherwise({
 				redirectTo: '/'
 			});

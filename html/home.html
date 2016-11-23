@@ -8,9 +8,12 @@
 	<div class="larger-by-4x animated flipInX">{{date | date : 'hh:mm'}}</div>
 	<div class="normal white animated flipInX">{{greeting}}</div>
 </div>
+<div id="busPanel" class="containter-top-left">
+</div>
 <script>
     $( document ).ready(function() {
 		$('#dateGreeting').draggable();
 		$('#weatherPlace').draggable();
+		$('#busPanel').draggable();
     });
 </script>

@@ -29,6 +29,10 @@ dt {
     color: #999;
 }
 
+.green {
+	color: #008000;
+}
+
 .disabled {
  visibility: hidden;
  cursor: default;
@@ -51,7 +55,7 @@ dt {
 }
 
 .smaller-by-4x {
-	font-size: 0.25em;
+	font-size: 0.75em;
 }
 
 .final { 
@@ -105,6 +109,13 @@ dt {
 	text-align: right;
 	top: 20px;
 	right: 20px;
+}
+
+.containter-top-left {
+	position: absolute;
+	text-align: left;
+	top: 20px;
+	left: 20px;
 }
 
 .container-middle-center {
