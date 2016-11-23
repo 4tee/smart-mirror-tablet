@@ -179,6 +179,7 @@
 		
 		/******* WEATHER functions *******/
 		function fetchWeather(cityName) {
+			if (cityName == 'Singapore') cityName = 'Singapore, Singapore'; // bug in Yahoo API
   	    	WeatherService.getWeather(cityName).then(function(data){
   	      		$scope.place = data;
 				$scope.todayWeatherIcon = WeatherService.setWeatherIcon(data.item.condition.code);
