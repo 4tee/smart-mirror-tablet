@@ -1,0 +1,26 @@
+<script>
+
+jQuery(document).ready(function($) {
+	
+	$(".busTimings").submit(function(e) {
+		e.preventDefault();
+		var busStopNo = $(this).children("input[name='busStop']").val();
+		var busNos = $(this).children("input[name='busNumbers']").val();
+		
+		console.log(busStopNo+ ' ' + busNos);
+
+		// $.post('/v1/getBusTimings/' + accessToken + "/" + busStopNo, { "buses": busNos }, function(data) {
+		// 	$(".output").html(JSON.stringify(JSON.parse(data), null, 4));
+		// });
+	});
+});
+
+</script>
+
+<form class="busTimings">
+	Bus Stop No.: <input type="text" name="busStop"><span class="busStopName"></span><br>
+	Bus Numbers (comma delimited): <input type="text" name="busNumbers"><br>
+	<input type="submit">
+</form>
+
+<pre class="output"></pre>

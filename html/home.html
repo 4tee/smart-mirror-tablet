@@ -8,9 +8,28 @@
 	<div class="larger-by-4x animated flipInX">{{date | date : 'hh:mm'}}</div>
 	<div class="normal white animated flipInX">{{greeting}}</div>
 </div>
+<div id="busPanel" class="containter-top-left">
+</div>
+<div id="twitterPanel">
+	<a
+		id="twitterPanel"
+		class="twitter-timeline"
+		data-dnt="true"
+		data-theme="dark"
+		data-link-color="#F5F8FA"
+		data-width="300"
+		data-height="400"
+		data-chrome="nofooter noborders noheader noscrollbar"
+		href="https://twitter.com/affsuzukicup">
+	</a>
+	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 <script>
     $( document ).ready(function() {
 		$('#dateGreeting').draggable();
+		$('#twitterPanel').draggable();
 		$('#weatherPlace').draggable();
+		$('#busPanel').draggable();
+		
     });
 </script>
