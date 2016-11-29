@@ -205,7 +205,7 @@
 					var htmlCode = 
 						'<table>' +
 						'<tr>' +
-							'<td><img src="/img/bus.png"></td>' +
+							'<td><img src="../img/bus.png"></td>' +
 							'<td class="smaller-by-2x" valign="middle" colspan="2">'+config.bus.name+'</td>' +
 						'</tr>' +
 						'<tr>' +
