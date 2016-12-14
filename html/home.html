@@ -8,9 +8,9 @@
 	<div class="larger-by-4x animated flipInX">{{date | date : 'hh:mm'}}</div>
 	<div class="normal white animated flipInX">{{greeting}}</div>
 </div>
-<div id="busPanel">
+<div id="busPanel" class="containter-top-left">
 </div>
-<div id="twitterPanel" class="containter-top-left">
+<!-- <div id="twitterPanel" class="containter-top-left">
 	<a
 		id="twitterPanel"
 		class="twitter-timeline"
@@ -23,11 +23,11 @@
 		href="https://twitter.com/affsuzukicup">
 	</a>
 	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+</div> -->
 <script>
     $( document ).ready(function() {
 		$('#dateGreeting').draggable();
-		$('#twitterPanel').draggable();
+		// $('#twitterPanel').draggable();
 		$('#weatherPlace').draggable();
 		$('#busPanel').draggable();
 		
