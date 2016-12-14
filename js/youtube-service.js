@@ -15,7 +15,7 @@
                     'q' : query,
                     'type':'video',
                     //Sharing this key in the hopes that it wont be abused 
-                    'key':'AIzaSyCEIm9MHMWrTj_wv90QfYf5AIf3iVxuvEg'
+                    'key':'AIzaSyC5p1NvIGrQna2cD_30-lp_qCOjjrUUsw0'
                 }
             });
         }
