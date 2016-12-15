@@ -4,7 +4,7 @@ var config = {
 		name: "Singapore, Singapore", //For default weather, map
 		zoom: 13
 	},
-	busURL: "http://172.18.98.219:9999",
+	busURL: "http://172.18.99.159", //"https://travel:9999",
 	apiKey: 3,
 	apiSecret: "94CUqFtsoTmiKdYPyV3pvK7h7GxF0tgXMJyMNtbH3qDfx3kOASdX1ECz1cJraeGr",
 	bus : {
